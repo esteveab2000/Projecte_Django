@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Llista d'Autors{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="mb-4">Llista d'Autors</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Cognom</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for author in authors %}
+            <tr>
+                <td>{{ author.first_name }}</td>
+                <td>{{ author.last_name }}</td>
+                <td>
+                    <a href="{% url 'author-detail' author.id %}" class="btn btn-primary btn-sm">saber-ne +</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="3">No hi ha autors disponibles.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

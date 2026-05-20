@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Posts amb etiqueta: {{ tag.tag }}{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="mb-4">
+        Llistat de tots els posts amb l'etiqueta <u>{{ tag.tag }}</u>
+    </h2>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        {% for post in posts %}
+        <div class="col">
+            {% include 'blog/includes/post_card.html' %}
+        </div>
+        {% empty %}
+        <p>No hi ha posts amb aquesta etiqueta.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

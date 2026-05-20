@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ author }}{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="mb-4">Detalls de l'Autor</h2>
+    <p><strong>Nom:</strong> {{ author.first_name }}</p>
+    <p><strong>Cognom:</strong> {{ author.last_name }}</p>
+    <p><strong>Adreça:</strong> {{ author.email }}</p>
+
+
+    <h4 class="mt-5 mb-4">Posts publicats per {{ author }}</h4>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for post in author.posts.all %}
+        <div class="col">
+            {% include 'blog/includes/post_card.html' %}
+        </div>
+        {% empty %}
+        <p>Aquest autor no té posts publicats.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

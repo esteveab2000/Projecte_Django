@@ -1,0 +1,21 @@
+.header-img {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.post-card-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card {
+    transition: box-shadow 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    margin-top: auto;
+}

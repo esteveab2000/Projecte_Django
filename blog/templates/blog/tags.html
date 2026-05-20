@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Etiquetes{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="mb-4">Etiquetes</h2>
+    <div class="row">
+        {% for tag in tags %}
+        <div class="col-md-3 mb-3">
+            <a href="{% url 'tag-posts-page' tag.id %}" class="btn btn-secondary">{{ tag.tag }}</a>
+        </div>
+        {% empty %}
+        <p>No hi ha etiquetes disponibles.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
