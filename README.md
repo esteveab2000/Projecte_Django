@@ -1,8 +1,8 @@
-# Blog Django - M3 UF6
+# Projecte Django
 
 ## Introducció
-Blog desenvolupat amb Django com a projecte d'aprenentatge del mòdul M3-UF6.
-Permet gestionar posts, autors i etiquetes, amb una interfície web basada en Bootstrap 5.
+Blog desenvolupat amb Django.
+Es pot gestionar posts, autors i etiquetes, amb una interfície web en la que s'ha utilitzat Bootstrap.
 
 ## Instal·lació ràpida
 
