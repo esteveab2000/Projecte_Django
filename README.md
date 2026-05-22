@@ -17,7 +17,7 @@ pip install -r requirements.txt
 # 3. Executa les migracions
 python manage.py migrate
 
-# 4. (Opcional) Carrega les dades d'exemple
+# 4. Carrega les dades d'exemple
 python manage.py loaddata blog/fixtures/initial_data.json
 ```
 
