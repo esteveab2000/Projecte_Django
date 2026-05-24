@@ -30,3 +30,9 @@ python manage.py runserver
 Accedeix a: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 Panel d'administració: [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)
+
+## Documentació de l'API
+
+Documentació generada automàticament amb Pydoc:
+
+[Veure documentació](https://esteveab2000.github.io/Projecte_Django/)
